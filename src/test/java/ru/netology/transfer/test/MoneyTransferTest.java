@@ -77,7 +77,7 @@ public class MoneyTransferTest {
         // проверяем что она предзаполнена
         Assertions.assertTrue(transferPage.checkToCard(DataHelper.getFirstCardInfo()));
         // переводим деньги и возвращаемся на страницу с картами
-        int overdraftAmount = initialSecondBalance + 10000;
+        int overdraftAmount = initialSecondBalance + 100000;
         var returningPage = transferPage.transfer(String.valueOf(overdraftAmount),
                 DataHelper.getSecondCardInfo());
         returningPage.updateBalances();
