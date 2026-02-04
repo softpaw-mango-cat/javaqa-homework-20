@@ -36,6 +36,10 @@ public class DashboardPage {
         return page(TransferPage.class);
     }
 
+    public void updateBalances() {
+        $("button[data-test-id=action-reload]").click();
+    }
+
     private int extractBalance(String text) {
         var start = text.indexOf(balanceStart);
         var finish = text.indexOf(balanceFinish);

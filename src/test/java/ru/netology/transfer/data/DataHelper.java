@@ -14,8 +14,7 @@ public class DataHelper {
         return new CardInfo("5559 0000 0000 0001",
                 "92df3f1c-a033-48e6-8390-206f6b1f56c0",
                 "0001"
-                );
-
+        );
     }
 
     public static CardInfo getSecondCardInfo() {

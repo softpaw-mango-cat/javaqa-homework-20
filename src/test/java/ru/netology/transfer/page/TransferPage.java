@@ -1,12 +1,10 @@
 package ru.netology.transfer.page;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.transfer.data.DataHelper;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.page;
 
 public class TransferPage {
@@ -36,9 +34,9 @@ public class TransferPage {
         return page(DashboardPage.class);
     }
 
-   public boolean checkToCard(DataHelper.CardInfo cardInfo) {
+    public boolean checkToCard(DataHelper.CardInfo cardInfo) {
         String cardMask = toCardField.getAttribute("value");
         String expectedDigits = cardInfo.getLastDigits();
-       return cardMask.trim().endsWith(expectedDigits);
+        return cardMask.trim().endsWith(expectedDigits);
     }
 }
