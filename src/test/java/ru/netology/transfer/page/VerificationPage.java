@@ -19,4 +19,10 @@ public class VerificationPage {
         verifyButton.click();
         return new DashboardPage();
     }
+
+    public DashboardPage validVerify(String verificationCode) {
+        codeField.setValue(verificationCode);
+        verifyButton.click();
+        return new DashboardPage();
+    }
 }

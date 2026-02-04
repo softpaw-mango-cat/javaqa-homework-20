@@ -20,4 +20,12 @@ public class LoginPageV3 {
         loginButton.click();
         return page(VerificationPage.class);
     }
+
+    // перегруженный метод для кукумбера
+    public VerificationPage validLogin(String login, String password) {
+        loginField.setValue(login);
+        passwordField.setValue(password);
+        loginButton.click();
+        return page(VerificationPage.class);
+    }
 }
